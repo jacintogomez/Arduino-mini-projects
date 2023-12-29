@@ -1,17 +1,17 @@
 //Use Arduino to control blinking Christmas lights
 
-#define d1 2;
-#define d2 3;
-#define d3 4;
-#define d4 5;
-#define d5 6;
-#define d6 7;
-#define d7 8;
-#define d8 9;
-#define d9 10;
-#define d10 11;
-#define d11 12;
-#define d12 13;
+#define d1 2
+#define d2 3
+#define d3 4
+#define d4 5
+#define d5 6
+#define d6 7
+#define d7 8
+#define d8 9
+#define d9 10
+#define d10 11
+#define d11 12
+#define d12 13
 
 void setup(){
     pinMode(d1,OUTPUT);
