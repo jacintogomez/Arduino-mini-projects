@@ -1,15 +1,20 @@
 //Arduino color sorting machine project
 //Jacinto Gomez
+
 #include <Servo.h>
+
 #define S0 2
 #define S1 3
 #define S2 4
 #define S3 5
 #define sensorOut 6
+
 Servo topServo;
 Servo bottomServo;
+
 int frequency = 0;
 int color=0;
+
 void setup() {
     pinMode(S0, OUTPUT);
     pinMode(S1, OUTPUT);
@@ -23,16 +28,15 @@ void setup() {
     bottomServo.attach(8);
     Serial.begin(9600);
 }
+
 void loop() {
     topServo.write(115);
     delay(500);
-
     for(int i = 115; i > 65; i--) {
         topServo.write(i);
         delay(2);
     }
     delay(500);
-
     color = readColor();
     delay(10);
     switch (color) {
@@ -54,24 +58,22 @@ void loop() {
         case 6:
             bottomServo.write(175);
             break;
-
         case 0:
             break;
     }
     delay(300);
-
     for(int i = 65; i > 29; i--) {
         topServo.write(i);
         delay(2);
     }
     delay(200);
-
     for(int i = 29; i < 115; i++) {
         topServo.write(i);
         delay(2);
     }
     color=0;
 }
+
 // Custom Function - readColor()
 int readColor() {
     // Setting red filtered photodiodes to be read

@@ -26,6 +26,7 @@ void setup(){
     pinMode(d10,OUTPUT);
     pinMode(d11,OUTPUT);
     pinMode(d12,OUTPUT);
+    delay(1000);
 }
 
 int whatdayisit(){

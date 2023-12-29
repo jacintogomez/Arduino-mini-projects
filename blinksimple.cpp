@@ -3,13 +3,13 @@
 #define d1 2
 
 void setup(){
-    pinMode(d2,OUTPUT);
+    pinMode(d1,OUTPUT);
 }
 
 void loop(){
     int relay=d1;
     digitalWrite(relay,HIGH);
     delay(1000);
-    dkgitalWrite(relay,LOW);
+    digitalWrite(relay,LOW);
     delay(1000);
 }
