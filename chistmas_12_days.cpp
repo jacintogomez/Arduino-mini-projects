@@ -1,4 +1,4 @@
-//Use Arduino to control blinking Christmas lights
+//Use Arduino to control blinking lights
 
 #define numpins 12
 int pins[numpins]={2,3,4,5,6,7,8,9,10,11,12,13};
@@ -21,9 +21,9 @@ int whatdayisit(){
 
 void turnoffandon(int n){
     digitalWrite(n,LOW);
-    delay(1000);
+    delay(500);
     digitalWrite(n,HIGH);
-    delay(1000);
+    delay(1500);
 }
 
 void nthday(int n){
@@ -33,8 +33,10 @@ void nthday(int n){
 }
 
 void loop(){
-    int relay=whatdayisit();
+    int day=5;
+    int relay=pins[day-2];
+    pinMode(relay,OUTPUT);
     digitalWrite(relay,HIGH);
-    delay(7000);
+    delay(5000);
     nthday(relay);
 }

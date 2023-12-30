@@ -1,9 +1,14 @@
-//Use Arduino to control blinking Christmas lights
+//Use Arduino to control blinking lights
 
-#define d1 2
+#define numpins 12
+#define d1 2;
+int pins[numpins]={2,3,4,5,6,7,8,9,10,11,12,13};
 
 void setup(){
-    pinMode(d1,OUTPUT);
+    for(int i=0;i<numpins;i++){
+        pinMode(pins[i],OUTPUT);
+    }
+    delay(1000);
 }
 
 void loop(){

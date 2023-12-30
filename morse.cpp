@@ -12,14 +12,24 @@ vector<char> bank(char d){
     if(d=='f'){r={'.','.','-','.'};}
     if(d=='g'){r={'-','-','.'};}
     if(d=='h'){r={'.','.','.','.'};}
-    if(d=='i'){r={'.','-'};}
-    if(d=='j'){r={'-','.','.','.'};}
-    if(d=='k'){r={'-','.','-','.'};}
-    if(d=='m'){r={'-','.','.'};}
-    if(d=='n'){r={'.'};}
-    if(d=='o'){r={'.','.','-','.'};}
-    if(d=='p'){r={'-','-','.'};}
-    if(d=='q'){r={'.','.','.','.'};}
+    if(d=='i'){r={'.','.'};}
+    if(d=='j'){r={'.','-','-','-'};}
+    if(d=='k'){r={'-','.','-'};}
+    if(d=='m'){r={'-','-'};}
+    if(d=='n'){r={'-','.'};}
+    if(d=='o'){r={'-','-','-'};}
+    if(d=='p'){r={'.','-','-','.'};}
+    if(d=='q'){r={'-','-','.','-'};}
+    if(d=='r'){r={'.','-','.'};}
+    if(d=='s'){r={'.','.','.'};}
+    if(d=='t'){r={'-'};}
+    if(d=='u'){r={'.','.','-'};}
+    if(d=='v'){r={'.','.','.','-'};}
+    if(d=='w'){r={'.','-','-'};}
+    if(d=='x'){r={'-','.','.','-'};}
+    if(d=='y'){r={'-','.','-','-'};}
+    if(d=='z'){r={'-','-','.','.'};}
+    if(d==' '){r={'.','.','.','.','.','.'};}
     return r;
 }
 
@@ -34,16 +44,16 @@ vector<vector<char>> tomorse(string ph){
 void blink(vector<vector<char>> in){
     for(vector<char> i:in){
         for(char j:i){
-            cout<<j;
+            cout<<j<<' ';
         }
-        cout<<endl;
+        cout<<' ';
     }
 }
 
 int main(){
     string phrase;
     cout<<"Enter sentence: "<<endl;
-    cin>>phrase;
+    getline(cin,phrase);
     vector<vector<char>> morse=tomorse(phrase);
     blink(morse);
     return 0;
